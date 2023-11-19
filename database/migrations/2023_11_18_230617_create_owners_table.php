@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('owners', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('email')->unique()->default(null);
+            $table->string('document')->unique();
+            $table->string('gender');
+            $table->date('birthday');
             $table->string('address');
             $table->string('phone');
             $table->timestamps();

@@ -18,8 +18,9 @@ class VehicleFactory extends Factory
     {
         return [
             'owner_id' => OwnerFactory::new(),
-            'model' => $this->faker->name,
-            'plate' => $this->faker->address,
+            'brand' => $this->faker->word,
+            'model' => $this->faker->word,
+            'plate' => $this->faker->word,
             'year' => $this->faker->year,
         ];
     }

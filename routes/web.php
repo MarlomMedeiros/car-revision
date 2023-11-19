@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CarsController;
+use App\Http\Controllers\OwnerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get(
-    '/',
-    [App\Http\Controllers\CarsController::class, 'index']
-)->name('cars.index');
+Route::resource('/vehicles', CarsController::class);
+Route::resource('/owners', OwnerController::class);
