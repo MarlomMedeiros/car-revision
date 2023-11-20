@@ -54,8 +54,10 @@ class RevisionController extends Controller
 
     public function create(Request $request)
     {
+        $vehicleId = $request->route('vehicle');
+
         return Inertia::render('Owners/Vehicles/Revisions/Create', [
-            'vehicle' => $request->all(),
+            'vehicle' => Vehicle::findOrFail($vehicleId)->load('owner'),
         ]);
     }
 
