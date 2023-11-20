@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [OwnerController::class, 'index']);
 Route::resource('/owners', OwnerController::class);
 Route::resource('/owners/{owner}/vehicles', VehicleController::class);
 Route::resource('/owners/{owner}/vehicles/{vehicle}/revisions', RevisionController::class);
