@@ -2,8 +2,8 @@
 import {router, Link} from "@inertiajs/vue3";
 
 defineProps({
-    vehicles: {
-        type: Array,
+    owner: {
+        type: Object,
         default: () => []
     },
 })
@@ -19,7 +19,7 @@ function destroy(id) {
     <div class="w-full flex flex-col p-4 pt-0">
         <div class="flex flex-row justify-end">
             <button class="mb-4 mr-4">
-                <Link href="/vehicles/create" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                <Link href=`
                     Registrar novo veículo
                 </Link>
             </button>
@@ -45,7 +45,7 @@ function destroy(id) {
                     Ações
                 </td>
             </tr>
-            <tr class="bg-gray-200" v-for="vehicle in vehicles" :key="vehicle.id">
+            <tr class="bg-gray-200" v-for="vehicle in owner.vehicles">
                 <td class="px-4 py-2">
                     {{ vehicle.model }}
                 </td>

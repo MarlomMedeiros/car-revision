@@ -18,7 +18,6 @@ function submit() {
 <template>
     <div class="w-full flex flex-col p-4 space-y-4 max-w-3xl mx-auto bg-gray-50 rounded-lg shadow-lg border border-gray-150">
         <form @submit.prevent="submit" class="w-full max-w-lg mx-auto p-8">
-
             <div class="mb-6">
                 <div v-if="$page.props.errors.model" class="text-red-500 mb-2">
                     {{ $page.props.errors.model }}
