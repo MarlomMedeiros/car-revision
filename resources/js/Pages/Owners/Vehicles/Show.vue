@@ -1,27 +1,32 @@
 <script setup>
-import { router, useForm } from "@inertiajs/vue3";
-import Vehicles from "./Vehicles/Index.vue";
-const prop = defineProps({
-  owner: {
+import Revisions from "./Revisions/Index.vue";
+
+defineProps({
+  vehicle: {
     type: Object,
-    default: () => {}
+    default: () => {
+    }
   },
 })
+
 </script>
 
 <template>
   <div class="bg-white rounded-lg shadow border border-gray-150 p-4 mx-auto w-[90vw] mb-4">
     <div>
-      Nome: {{ owner.name }}
+      Marca: {{ vehicle.brand }}
     </div>
     <div>
-      E-mail: {{ owner.email }}
+      Modelo: {{ vehicle.model }}
     </div>
     <div>
-      CPF: {{ owner.document }}
+      Ano: {{ vehicle.year }}
+    </div>
+    <div>
+      Placa: {{ vehicle.plate }}
     </div>
   </div>
-  <Vehicles :owner="owner" />
+  <Revisions :vehicle="vehicle"/>
 </template>
 
 <style scoped>

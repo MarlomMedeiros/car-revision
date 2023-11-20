@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\CarsController;
+use App\Http\Controllers\RevisionController;
+use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\OwnerController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/vehicles', CarsController::class);
 Route::resource('/owners', OwnerController::class);
+Route::resource('/owners/{owner}/vehicles', VehicleController::class);
+Route::resource('/owners/{owner}/vehicles/{vehicle}/revisions', RevisionController::class);

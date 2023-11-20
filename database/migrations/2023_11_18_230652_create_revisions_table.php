@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('revisions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('vehicle_id')->constrained('vehicles');
+            $table->foreignId('vehicle_id')->constrained('vehicles')->onDelete('cascade');
             $table->date('date');
             $table->text('description');
             $table->decimal('cost', 8, 2);

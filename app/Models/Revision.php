@@ -14,7 +14,7 @@ class Revision extends Model
         'vehicle_id',
         'date',
         'description',
-        'price',
+        'cost',
     ];
 
     /**

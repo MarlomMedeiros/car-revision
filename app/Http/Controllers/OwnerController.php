@@ -10,7 +10,7 @@ class OwnerController extends Controller
     public function index()
     {
         return inertia('Owners/Index', [
-            'owners' => Owner::all(),
+            'owners' => Owner::all()->load('vehicles'),
         ]);
     }
 
@@ -30,10 +30,10 @@ class OwnerController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:255',
-            'document' => 'required|unique:owners,document,'.$owner->id,
+            'document' => 'required|unique:owners,document,' . $owner->id,
             'gender' => 'required|in:male,female',
             'birthday' => 'required|date',
-            'email' => 'required|email|unique:owners,email,'.$owner->id,
+            'email' => 'required|email|unique:owners,email,' . $owner->id,
             'phone' => 'required',
             'address' => 'required',
         ]);
