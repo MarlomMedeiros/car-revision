@@ -1,5 +1,6 @@
 <script setup>
-import {router, Link} from "@inertiajs/vue3";
+import {defineProps } from "vue";
+import {router } from "@inertiajs/vue3";
 import Layout from "../Layout.vue";
 import Table from "../components/Table.vue";
 
