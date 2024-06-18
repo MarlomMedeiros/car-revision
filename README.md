@@ -12,14 +12,14 @@ Siga estas instruções para obter uma cópia do projeto em funcionamento na sua
 
 Certifique-se de que sua máquina atenda aos seguintes requisitos:
 
-- PHP >= 8.1
+- PHP >= 8.2
 - Composer - [Instalação do Composer](https://getcomposer.org/download/)
 - Node.js e NPM - [Instalação do Node.js](https://nodejs.org/)
 
 
 ## Tecnologias Utilizadas:
   
-- Laravel 10
+- Laravel 11
 - Vue.js 3
 - Tailwind CSS 3
 - Inertia.js 1
